@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="./css/login.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link 	rel="shortcut icon"
+		type="image/png"
+		href="./imagini/favicon.ico"/>
+</head>
+<body>
+  <form name="Myform">
+    <div class="wrapper" >
+    
+        <h3>Sing in</h3>
+  
+     <section class="format">
+        <label for="email">Email address:
+        <input type="email" placeholder="Your Email" name="emailtext"  id='emailInput' style="width: 250px;" required>
+      </label>
+
+        <label for="username">
+          <b>Username</b>
+        <input type="text" placeholder="Enter Username" minlength="3" id='uNameInput'style="width: 250px;" required>
+
+       <ul class="input-requirements">
+        <li id='user1'>At least 3 characters long</li>
+        <li id='user2'>Must only contain letters and numbers (no special characters)</li>
+      </ul>
+    </label>
+
+    
+      <label for="pswrd"><b>Password</b>
+      <input type="password" placeholder="Enter Password" maxlength="100" minlength="8" id='pswInput' style="width: 250px;" required>
+      <ul class="input-requirements">
+        <li>At least 8 characters long (and less than 100 characters)</li>
+        <li>Contains at least 1 number</li>
+        <li>Contains at least 1 lowercase letter</li>
+        <li>Contains at least 1 uppercase letter</li>
+        <li>Contains a special character (e.g. @ !)</li>
+      </ul>
+    </label>
+
+
+
+      <label for="pswrdR"><b>Repeat password</b>
+    <input type="password" placeholder="Enter Password" maxlength="100" minlength="8" id='pswInputR' style="width: 250px;"required>
+    <ul class="input-requirements">
+      <li>At least 8 characters long (and less than 100 characters)</li>
+      </ul>
+    </label>
+    <div class="customselect">
+      <label for="checkbox">
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+      <select name="clist" form="listform">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+      </select>
+    
+     
+    </div>
+
+    
+      <div class="radiocheck">
+        <b><br>Gender:<br></b>
+        <input type="radio" name="gender" value="male" checked>Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other  
+      </div>
+      
+      
+      <div class="slidecontainer">
+        <b>Age:</b>
+        <input type="range" name="ageInputName" id="ageInputId" value="24" min="14" max="100" oninput="ageOutputId.value = ageInputId.value">
+        <output name="ageOutputName" id="ageOutputId">24</output>
+      </div>
+      <input type="submit" value="Submit" onclick="ValidateEmail(document.Myform.emailtext)">
+    </form>
+  </div>
+</section>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+     <script src="./java/login.js"></script>
+  
+
+</body>
+</html>
